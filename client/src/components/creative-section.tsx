@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
+import ContentModal from '@/components/content-modal';
 
 export default function CreativeSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { ref, isVisible } = useIntersectionObserver();
 
   return (
@@ -42,6 +45,7 @@ export default function CreativeSection() {
             </p>
             <Button 
               className="bg-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
+              onClick={() => setIsModalOpen(true)}
               data-testid="button-our-services"
             >
               OUR SERVICES
@@ -49,6 +53,12 @@ export default function CreativeSection() {
           </motion.div>
         </div>
       </div>
+      
+      <ContentModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        type="our-services"
+      />
     </section>
   );
 }

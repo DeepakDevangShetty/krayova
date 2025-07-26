@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
+import ContentModal from '@/components/content-modal';
 
 const services = [
   {
     title: 'WEB DESIGN',
     description: 'Creative and interactive website design services.',
     buttonText: 'LEARN MORE',
+    buttonType: 'learn-more' as const,
     image: 'https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400',
     alt: 'Dynamic web design interface with flowing data streams',
   },
@@ -14,6 +17,7 @@ const services = [
     title: 'SEO OPTIMIZATION',
     description: "Improve your website's search engine ranking.",
     buttonText: 'BOOST VISIBILITY',
+    buttonType: 'boost-visibility' as const,
     image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400',
     alt: 'SEO analytics dashboard with colorful data visualization',
   },
@@ -21,12 +25,14 @@ const services = [
     title: 'DIGITAL MARKETING',
     description: 'Strategies to enhance your online presence.',
     buttonText: 'GROW AUDIENCE',
+    buttonType: 'grow-audience' as const,
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400',
     alt: 'Digital marketing concept with wireframes and user journey',
   },
 ];
 
 export default function ServicesSection() {
+  const [modalOpen, setModalOpen] = useState<string | null>(null);
   const { ref, isVisible } = useIntersectionObserver();
 
   return (
@@ -65,6 +71,7 @@ export default function ServicesSection() {
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <Button 
                   className="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300"
+                  onClick={() => setModalOpen(service.buttonType)}
                   data-testid={`button-${service.buttonText.toLowerCase().replace(' ', '-')}`}
                 >
                   {service.buttonText}
@@ -74,6 +81,14 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
+      
+      {modalOpen && (
+        <ContentModal 
+          isOpen={true}
+          onClose={() => setModalOpen(null)}
+          type={modalOpen as any}
+        />
+      )}
     </section>
   );
 }

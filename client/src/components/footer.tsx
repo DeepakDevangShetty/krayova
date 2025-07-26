@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
+import logoImage from '@assets/InShot_20250723_183629002__1_-removebg-preview (1)_1753546306552.png';
 
 export default function Footer() {
   return (
@@ -13,9 +13,11 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                <Zap className="text-white text-lg" />
-              </div>
+              <img 
+                src={logoImage} 
+                alt="KRAYOVA Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-2xl font-bold">KRAYOVA</span>
             </div>
             <p className="text-gray-400">BANGALORE</p>

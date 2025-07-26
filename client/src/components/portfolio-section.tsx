@@ -20,12 +20,6 @@ const portfolioItems = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400',
     alt: 'Digital marketing analytics on multiple screens',
   },
-  {
-    title: 'Mobile App Design',
-    description: 'User-centered interface',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400',
-    alt: 'Creative team collaborating on web design project',
-  },
 ];
 
 export default function PortfolioSection() {
@@ -47,7 +41,7 @@ export default function PortfolioSection() {
           OUR WORK
         </motion.h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
             <motion.div
               key={index}

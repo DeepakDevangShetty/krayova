@@ -21,8 +21,8 @@ export default function Footer() {
               <span className="text-2xl font-bold">KRAYOVA</span>
             </div>
             <p className="text-gray-400">BANGALORE</p>
-            <p className="text-gray-400">krayova@gmail.com</p>
-            <p className="text-gray-400">+91 8310922411</p>
+            <p className="text-gray-400">krayovaofficial@gmail.com</p>
+            <p className="text-gray-400">+91 7892059766</p>
           </motion.div>
           
           <motion.div

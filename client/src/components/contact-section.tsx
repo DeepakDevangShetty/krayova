@@ -46,8 +46,8 @@ export default function ContactSection() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Phone className="text-blue-500 text-xl" />
-                <span className="text-gray-700">krayova@gmail.com</span>
-                <span className="text-gray-700">+91 8310922411</span>
+                <span className="text-gray-700">krayovaofficial@gmail.com</span>
+                <span className="text-gray-700">+91 7892059766</span>
               </motion.div>
               <motion.div 
                 className="flex items-center space-x-4"

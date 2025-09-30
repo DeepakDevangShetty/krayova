@@ -21,7 +21,8 @@ export default function Footer() {
               <span className="text-2xl font-bold">KRAYOVA</span>
             </div>
             <p className="text-gray-400">BANGALORE</p>
-            <p className="text-gray-400">+91 123456789</p>
+            <p className="text-gray-400">krayova@gmail.com</p>
+            <p className="text-gray-400">+91 8310922411</p>
           </motion.div>
           
           <motion.div
@@ -31,7 +32,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold mb-4">HOURS</h3>
-            <p className="text-gray-400">Monday—Friday 9am-6pm</p>
+            <p className="text-gray-400">Monday—Friday[9am-6pm]</p>
           </motion.div>
           
           <motion.div

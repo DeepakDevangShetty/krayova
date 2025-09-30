@@ -94,20 +94,29 @@ Preferred communication style: Simple, everyday language.
 
 ### Build Process
 1. Frontend builds to `dist/public` directory via Vite
-2. Backend compiles to `dist/index.js` via esbuild
+2. Backend compiles to `dist/index.js` via esbuild (for local development only)
 3. Static assets are served from built frontend directory
 4. Environment variables configure database connections
 
+### Vercel Deployment (Production)
+- **Platform**: Vercel for static site hosting
+- **Configuration**: `vercel.json` with SPA routing support
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist/public`
+- **Deployment Type**: Static site (no backend API)
+- **Auto-Deploy**: Configured for automatic deployments from Git
+- **Guide**: See `VERCEL_DEPLOYMENT.md` for complete deployment instructions
+
 ### Production Configuration
-- **Server**: Express serves both API and static files
-- **Database**: PostgreSQL connection via environment variables
-- **Session Storage**: Connect-pg-simple for PostgreSQL-backed sessions
-- **Environment**: NODE_ENV-based configuration switching
+- **Hosting**: Vercel static site deployment with global CDN
+- **HTTPS**: Automatic SSL certificate provisioning
+- **Routing**: Client-side routing with fallback to index.html
+- **Environment**: Production optimized Vite build
 
 ### Development Workflow
 - **Dev Server**: Hot reloading with `npm run dev`
 - **Type Checking**: `npm run check` for TypeScript validation
-- **Database**: `npm run db:push` for schema deployment
 - **Build**: `npm run build` for production compilation
+- **Deploy**: Push to Git for automatic Vercel deployment
 
-The application is structured as a monorepo with shared types and schemas, enabling type safety across the full stack while maintaining clear separation between client and server concerns.
+The application is deployed as a static site to Vercel, leveraging global CDN distribution, automatic HTTPS, and instant deployments for optimal performance and developer experience.

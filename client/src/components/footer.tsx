@@ -44,25 +44,13 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">SOCIAL</h3>
             <div className="space-y-2">
               <a
-                href="#"
-                className="block text-gray-400 hover:text-white transition-colors"
-                data-testid="footer-facebook"
-              >
-                Facebook
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/krayova_/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-gray-400 hover:text-white transition-colors"
                 data-testid="footer-instagram"
               >
                 Instagram
-              </a>
-              <a
-                href="#"
-                className="block text-gray-400 hover:text-white transition-colors"
-                data-testid="footer-tiktok"
-              >
-                TikTok
               </a>
             </div>
           </motion.div>

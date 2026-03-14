@@ -13,18 +13,18 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src={logoImage} 
-                alt="KRAYOVA Logo" 
+              <img
+                src={logoImage}
+                alt="KRAYOVA Logo"
                 className="w-10 h-10 object-contain"
               />
               <span className="text-2xl font-bold">KRAYOVA</span>
             </div>
             <p className="text-gray-400">BANGALORE</p>
             <p className="text-gray-400">krayova@gmail.com</p>
-            <p className="text-gray-400">+91 8310922411</p>
+            <a href="tel:+918310922411" className="text-gray-400 hover:text-white transition-colors">+91 8310922411</a>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">HOURS</h3>
             <p className="text-gray-400">Monday—Friday[9am-6pm]</p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,22 +43,22 @@ export default function Footer() {
           >
             <h3 className="text-lg font-semibold mb-4">SOCIAL</h3>
             <div className="space-y-2">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="block text-gray-400 hover:text-white transition-colors"
                 data-testid="footer-facebook"
               >
                 Facebook
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="block text-gray-400 hover:text-white transition-colors"
                 data-testid="footer-instagram"
               >
                 Instagram
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="block text-gray-400 hover:text-white transition-colors"
                 data-testid="footer-tiktok"
               >

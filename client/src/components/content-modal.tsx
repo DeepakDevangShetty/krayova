@@ -33,8 +33,23 @@ const modalContent = {
           </div>
         </div>
         <div className="flex gap-4">
-          <Button className="bg-blue-500 hover:bg-blue-600">Contact Us</Button>
-          <Button variant="outline">View Portfolio</Button>
+          <Button
+            className="bg-blue-500 hover:bg-blue-600"
+            onClick={() => window.open('tel:+918310922411', '_self')}
+          >
+            Contact Us
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => {
+              onClose();
+              setTimeout(() => {
+                document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+              }, 300);
+            }}
+          >
+            View Portfolio
+          </Button>
         </div>
       </div>
     )
